@@ -8,12 +8,12 @@
   <form>
     <label for="email">Email</label>
     <div>
-      <input type="email">
+      <input id="email" type="email">
     </div>
 
     <label for="options">Why is coding cool?</label>
     <div>
-      <select>
+      <select id="options">
         <option>Select an option</option>
         <option>Because it's interesting</option>
         <option>Because it's fun</option>
@@ -21,27 +21,27 @@
       </select>
     </div>
 
-    <label for="languages">Favorite Language (choose one)</label>
+    <p>Favorite Language (choose one)</p>
     <div>
-      <input type="radio" name="languages">
+      <input id="html" type="radio" name="languages">
       <label for="html">HTML</label>
-      <input type="radio" name="languages">
+      <input id="css" type="radio" name="languages">
       <label for="css">CSS</label>
-      <input type="radio" name="languages">
+      <input id="javascript" type="radio" name="languages">
       <label for="javascript">JavaScript</label>
     </div>
 
     <div>
-      <label for="newsletter">Would you like to sign up for more information?</label>
+      <p>Would you like to sign up for more information?</p>
       <div>
-        <input type="checkbox">
+        <input id="sign-up" type="checkbox">
         <label for="sign-up">Sign me up!</label>
       </div>
     </div>
 
     <label for="comments">Comments</label>
     <div>
-      <textarea cols="25" rows="10"></textarea>
+      <textarea id="comments" cols="25" rows="10"></textarea>
       <div>
         <input type="submit">
       </div>
