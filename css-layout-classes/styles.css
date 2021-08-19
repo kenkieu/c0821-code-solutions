@@ -8,24 +8,16 @@
   display: flex;
 }
 
-.column-full {
-  width: 100%;
-}
-
 .column-two-thirds {
-  width: 66.66%;
-}
-
-.column-half {
-  width: 50%;
+  flex-basis: 66.66%;
 }
 
 .column-third {
-  width: calc(100% / 3);
+  flex-basis: calc(100% / 3);
 }
 
 .column-fourth {
-  width: 25%;
+  flex-basis: 25%;
 }
 
 img {
