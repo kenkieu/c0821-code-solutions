@@ -1,0 +1,24 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-half {
+  flex-wrap: wrap;
+  flex-basis: 50%;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
