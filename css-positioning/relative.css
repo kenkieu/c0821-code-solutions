@@ -6,9 +6,9 @@
 
 .pokemon > img {
   width: 150px;
-  position: relative;
 
   /* your code here */
+  position: relative;
 }
 
 #bulbasaur {
