@@ -2,14 +2,14 @@ body {
   font-family: "Karla", sans-serif;
 }
 
+.container {
+  width: 1080px;
+  margin: 40px auto;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
-}
-
-.container {
-  width: 1080px;
-  margin: 50px auto;
 }
 
 .col-full {
@@ -17,7 +17,6 @@ body {
 }
 
 .col-three-fourth {
-  flex-wrap: wrap;
   flex-basis: 75%;
 }
 
@@ -34,49 +33,49 @@ body {
   justify-content: center;
 }
 
-.align-start {
-  display: flex;
-  align-items: flex-start;
+.ptop-25 {
+  padding-top: 25px;
 }
 
-.padding {
-  padding: 40px 65px;
-}
-
-.heading {
-  font-size: 3rem;
-  letter-spacing: 0.3rem;
-  margin-bottom: 0;
-}
-
-.sub-heading {
-  font-size: 1.1rem;
-}
-
-.text-styles {
-  font-size: 0.9rem;
+.line-height {
   line-height: 2rem;
-}
-
-.margin-left {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.header-spacing {
-  width: 57%;
-  margin: auto;
 }
 
 .text-center {
   text-align: center;
 }
 
-.btn-styles {
+.sub-heading {
+  font-size: 1.07rem;
+}
+
+.padding-column {
+  padding: 35px 75px 35px 30px;
+}
+
+.header-spacing {
+  width: 65%;
+  margin: auto;
+}
+
+.heading-style {
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 0;
+}
+
+.img-position {
+  display: flex;
+  align-items: flex-start;
+  padding-right: 7px;
+}
+
+.btn-style {
   font-family: "Karla", sans-serif;
+  font-size: medium;
   font-weight: bold;
   background-color: white;
   color: #d14c45;
   border: 2px solid #d14c45;
-  padding: 10px 45px;
+  padding: 10px 46px;
 }

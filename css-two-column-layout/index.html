@@ -1,72 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CSS Challenge - Two Column Layout</title>
-  <link rel="stylesheet" href="fonts.css">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-   <header class="row header-spacing">
-      <div class="col-full text-center">
-        <h1 class="justify-center heading">SCALE, SPEED, AGILITY</h1>
-        <p class="text-styles">We've dedicated thousands of man hours to making healthcare institutions in the Helium network run 10x more efficiently and deliver an unparalleled quality of care.</p>
-      </div>
-    </header>
-
-    <section>
-      <div class="row">
-        <div class="col-half justify-center padding">
-          <div class="col-one-fourth align-start">
-            <img src="images/software.svg" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Challenge - Two Column Layout</title>
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="row header-spacing">
+        <div class="col-full text-center">
+          <h1 class="justify-center heading-style">SCALE, SPEED, AGILITY</h1>
+          <p class="line-height">
+            We've dedicated thousands of man hours to making healthcare
+            institutions in the Helium network run 10x more efficiently and
+            deliver an unparalleled quality of care.
+          </p>
+        </div>
+      </header>
+      <section>
+        <div class="row">
+          <div class="col-half justify-center padding-column">
+            <div class="col-one-fourth img-position">
+              <img src="images/software.svg" alt="software-img" />
+            </div>
+            <div class="col-three-fourth ptop-25">
+              <h3 class="sub-heading">
+                INTUTIVE, <br />
+                SMART SOFTWARE
+              </h3>
+              <p class="line-height">
+                We build products that transform how healthcare facilities run
+                across Africa &#8212 making them radically more efficient
+                operationally and financially, a complete turnaround.
+              </p>
+            </div>
           </div>
-          <div class="col-three-fourth">
-            <h3 class="sub-heading">INTUTIVE, <br> SMART SOFTWARE</h3>
-            <p class="text-styles">We build products that transform how healthcare facilities run across Africa – making them radically more efficient operationally and financially, a complete turnaround.</p>
+          <div class="col-half justify-center padding-column">
+            <div class="col-one-fourth img-position">
+              <img src="images/practice.svg" alt="practice-img" />
+            </div>
+            <div class="col-three-fourth ptop-25">
+              <h3 class="sub-heading">
+                PRACTICE MEDICINE, NOT <br />
+                ADMINISTRATION
+              </h3>
+              <p class="line-height">
+                Our all-in-one electronic health records (EHR), hospital
+                management (HMIS) &amp; billing system helps streamline your
+                facility, reduce waste and improve quality of care.
+              </p>
+            </div>
+          </div>
+          <div class="col-half justify-center padding-column">
+            <div class="col-one-fourth img-position">
+              <img src="images/circumstance.svg" alt="circumstance-img" />
+            </div>
+            <div class="col-three-fourth ptop-25">
+              <h3 class="sub-heading">FOR ANY CIRCUMSTANCE</h3>
+              <p class="line-height">
+                Our intuitive system is built around the peculiarities of your
+                facility; we support offline deployments, sync to the cloud and
+                run on any device 24/7.
+              </p>
+            </div>
+          </div>
+          <div class="col-half justify-center padding-column">
+            <div class="col-one-fourth img-position">
+              <img src="images/data.svg" alt="data-img" />
+            </div>
+            <div class="col-three-fourth ptop-25">
+              <h3 class="sub-heading">DATA THAT TRANSFORMS</h3>
+              <p class="line-height">
+                We understand your facility better than you do; we provide
+                visually-appealing real-time analytics, reports and trends at
+                your finger tips.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="col-half justify-center padding">
-          <div class="col-one-fourth align-start">
-            <img src="images/practice.svg" alt="">
-          </div>
-          <div class="col-three-fourth">
-            <h3 class="sub-heading">PRACTICE MEDICINE, NOT <br> ADMINISTRATION</h3>
-            <p class="text-styles">Our all-in-one electronic health records (EHR), hospital management (HMIS) &amp; billing system helps streamline your facility, reduce waste and improve quality of care.</p>
-          </div>
+      </section>
+      <section class="row">
+        <div class="col-full justify-center">
+          <button class="btn-style" type="button">LEARN MORE</button>
         </div>
-
-        <div class="col-half justify-center padding">
-          <div class="col-one-fourth align-start">
-            <img src="images/circumstance.svg" alt="">
-          </div>
-
-          <div class="col-three-fourth">
-            <h3 class="sub-heading">FOR ANY CIRCUMSTANCE</h3>
-            <p class="text-styles">Our intuitive system is built around the peculiarities of your facility; we support offline deployments, sync to the cloud and run on any device 24/7.</p>
-          </div>
-
-        </div>
-        <div class="col-half justify-center padding">
-          <div class="col-one-fourth align-start">
-            <img src="images/data.svg" alt="">
-          </div>
-          <div class="col-three-fourth">
-            <h3>DATA THE TRANSFORMS</h3>
-            <p class="text-styles">We understand your facility better than you do; we provide visually-appealing real-time analytics, reports and trends at your finger tips.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="row">
-      <div class="col-full justify-center">
-        <button class="btn-styles" type="button">LEARN MORE</button>
-      </div>
-    </section>
-  </div>
-</body>
+      </section>
+    </div>
+  </body>
 </html>
