@@ -8,9 +8,8 @@ body {
 }
 
 .container {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 1080px;
+  margin: 50px auto;
 }
 
 .col-full {
@@ -23,12 +22,10 @@ body {
 }
 
 .col-half {
-  flex-wrap: wrap;
   flex-basis: 50%;
 }
 
 .col-one-fourth {
-  flex-wrap: wrap;
   flex-basis: 25%;
 }
 
@@ -43,15 +40,43 @@ body {
 }
 
 .padding {
-  padding: 30px 100px 100px 0;
+  padding: 40px 65px;
 }
 
 .heading {
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 0.3rem;
+  margin-bottom: 0;
 }
 
 .sub-heading {
-  font-size: 1rem;
-  letter-spacing: 0.05rem;
+  font-size: 1.1rem;
+}
+
+.text-styles {
+  font-size: 0.9rem;
+  line-height: 2rem;
+}
+
+.margin-left {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.header-spacing {
+  width: 57%;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-styles {
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  background-color: white;
+  color: #d14c45;
+  border: 2px solid #d14c45;
+  padding: 10px 45px;
 }
