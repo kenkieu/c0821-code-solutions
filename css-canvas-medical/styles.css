@@ -1,0 +1,88 @@
+body{
+  font-family;
+}
+
+.btn-style{
+  background-color: #294464;
+  color:white;
+  border-radius: 3px;
+  border-style: none;
+}
+
+.contact-us-padding{
+  padding: 8px 12px;
+}
+
+.get-started-padding{
+  padding-left: 30px;
+  padding-right: 30px
+}
+
+.font-white{
+  color: white;
+}
+
+.text-gray{
+  color: #6E6E6E
+}
+
+.nav-link-gray{
+  color: #A0A0A0;
+}
+
+.bg-light-gray{
+  background-color: #FAFAFA;
+}
+
+.bg-dark-gray{
+  background-color:#525351;
+}
+
+.font-avenir{
+  font-family: 'Avenir', sans-serif;
+}
+
+.font-tiempos{
+  font-family: "Tiempos Headline", serif;
+}
+
+.container {
+  width: 1920px;
+  display: flex;
+
+}
+
+.row {
+  display: flex;
+  flex-basis: 80%;
+}
+
+.col-full {
+  display: flex;
+  flex-basis: 100%;
+}
+
+.col-half {
+  display: flex;
+  flex-basis: 50%;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.justify-end{
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-15{
+  margin: 15px;
+}
