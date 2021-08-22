@@ -9,7 +9,8 @@
 }
 
 .contact-us-padding {
-  padding: 3px 6px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
 }
 
 .get-started-padding {
@@ -24,7 +25,7 @@
 .subhead-font {
   font-size: 1.4rem;
   font-weight: normal;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .small-font {
@@ -39,8 +40,18 @@
   color: #6e6e6e;
 }
 
-.nav-link-gray {
+.nav-style {
   color: #a0a0a0;
+  text-decoration: none;
+  padding: 1.15rem 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
 }
 
 .bg-light-gray {
@@ -84,6 +95,14 @@
   flex-basis: 50%;
 }
 
+.col-two-third {
+  flex-basis: calc(200% / 3);
+}
+
+.col-third {
+  flex-basis: calc(100% / 3);
+}
+
 /* Utility */
 
 .flex-wrap {
@@ -114,22 +133,14 @@
   text-align: center;
 }
 
-.margin-center {
-  margin-top: auto;
-  margin-bottom: auto;
-
-  /* margin-left: auto;
-  margin-right: auto; */
-}
-
 .pad-side {
   padding: 0 3rem;
 }
 
-footer a {
+.link-item {
   font-size: 0.8rem;
   text-decoration: none;
-  padding-right: 20px;
+  padding: 0 15px;
 }
 
 section a {
@@ -158,8 +169,19 @@ section a {
 }
 
 .hero-image {
+  margin: 0 auto;
   width: 100%;
-  position: relative;
+  height: 410px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  height: 410px;
 }
 
 address {
@@ -167,6 +189,35 @@ address {
   line-height: 1.2rem;
 }
 
-h2 {
-  margin: 0;
+.relative {
+  position: relative;
+}
+
+div > h1 {
+  font-weight: normal;
+  position: absolute;
+  left: 7.5%;
+  top: 7.5%;
+}
+
+h1 + p {
+  line-height: 1.2rem;
+  position: absolute;
+  left: 7.5%;
+  bottom: 30%;
+}
+
+p + button {
+  position: absolute;
+  left: 7.5%;
+  bottom: 17%;
+}
+
+.blue-logo-resize {
+  width: 40%;
+}
+
+.line {
+  border-bottom: 1px solid #f1f2f4;
+  margin-bottom: 60px;
 }
