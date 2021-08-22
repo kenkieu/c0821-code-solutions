@@ -1,90 +1,100 @@
-body{
-  font-family;
-}
 
-.btn-style{
+/* Styles */
+.btn-style {
   background-color: #294464;
-  color:white;
-  border-radius: 5px;
+  color: white;
+  border-radius: 4px;
   border-style: none;
+  height: 40px;
 }
 
-.contact-us-padding{
-  padding: 8px 12px;
+.contact-us-padding {
+  padding: 3px 6px;
 }
 
-.get-started-padding{
-  padding: 20px 70px;
-  font-size: 1.6rem;
-  height: 80px;
+.get-started-padding {
+  padding: 5px 35px;
+  font-size: 1rem;
 }
 
-.font-white{
+.font-white {
   color: white;
 }
 
-.subhead-font-size {
-font-size: 2.5rem;
-margin-bottom: 0;
+.subhead-font {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-bottom: 0;
 }
 
-.text-font-size{
-  font-size: 1.25rem;
+.small-font {
+  font-size: 0.7rem;
 }
 
-.subtext-font-size {
-  font-size: 1.1rem;
+.medium-font {
+  font-size: 0.9rem;
 }
 
-.text-gray{
-  color: #6E6E6E
+.text-gray {
+  color: #6e6e6e;
 }
 
-.nav-link-gray{
-  color: #A0A0A0;
+.nav-link-gray {
+  color: #a0a0a0;
 }
 
-.bg-light-gray{
-  background-color: #FAFAFA;
+.bg-light-gray {
+  background-color: #fafafa;
 }
 
-.bg-dark-gray{
-  background-color:#525351;
+.bg-dark-gray {
+  background-color: #525351;
 }
 
-.font-avenir{
+.font-avenir {
   font-family: 'Avenir', sans-serif;
 }
 
-.font-tiempos{
+.font-tiempos {
   font-family: "Tiempos Headline", serif;
 }
 
+
+/* Container */
 .container {
-  width: 100%;
-  display: flex;
+  width: 975px;
+  margin: 0 auto;
 }
 
 .row {
   display: flex;
-  flex-basis: 77%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
 }
 
 .col-full {
-  /* display: flex; */
   flex-basis: 100%;
 }
 
 .col-half {
-  display: flex;
   flex-basis: 50%;
 }
 
-.flex-wrap{
+/* Utility */
+
+.flex-wrap {
   flex-wrap: wrap;
 }
 
-.justify-end{
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-end {
   justify-content: flex-end;
 }
 
@@ -92,19 +102,71 @@ margin-bottom: 0;
   justify-content: center;
 }
 
+.justify-spacearound {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
+
 .text-center {
   text-align: center;
 }
 
-.align-center{
-align-items: center;
+.margin-center {
+  margin-top: auto;
+  margin-bottom: auto;
+
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
-.margin-center{
-  margin-top:auto;
-  margin-bottom:auto;
+.pad-side {
+  padding: 0 3rem;
 }
 
-.margin-15{
-  margin: 15px;
+footer a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+section a {
+  text-decoration: none;
+  line-height: 2rem;
+}
+
+.xl-content-spacing {
+  padding: 4.5rem 0 5rem 0;
+}
+
+.lg-content-spacing {
+  padding: 3rem 0;
+}
+
+.med-content-spacing {
+  padding: 2.3rem 0;
+}
+
+.sm-content-spacing {
+  padding: 1.2rem 0;
+}
+
+.logo-resize {
+  width: 25%;
+}
+
+.hero-image {
+  width: 100%;
+  position: relative;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.2rem;
+}
+
+h2 {
+  margin: 0;
 }
