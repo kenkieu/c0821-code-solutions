@@ -104,7 +104,7 @@ footer.container {
   border-radius: 3px;
   border-style: none;
   height: 43px;
-  margin: 0.7rem;
+  margin: 0.7rem 0;
 }
 
 .sm-btn-padding {
