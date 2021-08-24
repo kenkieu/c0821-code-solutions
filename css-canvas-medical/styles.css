@@ -127,10 +127,6 @@ footer.container {
   padding: 1.15rem 1rem;
 }
 
-/* .col-two-third > button {
-  margin: 0.7rem;
-} */
-
 ul + button {
   margin: 0.7rem;
 }
