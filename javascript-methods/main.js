@@ -28,10 +28,9 @@ var css = {
   title: 'CSS Secrets',
   author: 'Lea Verou'
 };
-
 library.push(js);
 library.unshift(css);
-library.splice(1);
+library.splice(1, 1);
 console.log('value of library:', library);
 
 var fullName = 'Ken Kieu';
