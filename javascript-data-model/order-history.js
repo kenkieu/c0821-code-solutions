@@ -1,29 +1,20 @@
 var orderHistory = [
   {
-    orderDetails: {
-      orderPlaced: 'Aug 04, 2020',
-      orderNumber: '114-3941689-8772232',
-      recipient: 'JS Masher'
-    },
-
-    itemDetails: {
-      itemName: ['JavaScript for impatient programmers'],
-      author: ['Rauschmayer, Dr.Axel']
-    },
-
-    deliveryDetails: {
-      delivered: true,
-      deliveryEstimate: 'Aug 08, 2020',
-      deliveryHandOff: false,
-      returnWindow: ['Sep 7, 2020'],
-      productSupport: false
-
+    orderPlaced: 'Aug 04, 2020',
+    orderNumber: '114-3941689-8772232',
+    recipient: 'JS Masher',
+    author: ['Rauschmayer, Dr.Axel'],
+    delivered: true,
+    deliveryEstimate: 'Aug 08, 2020',
+    deliveryHandOff: false,
+    returnWindow: 'Sep 7, 2020',
+    productSupport: false
+    items: ['JavaScript for impatient programmers'],
     },
 
     costDetails: {
       itemCost: [31.55],
       cartTotal: 34
-    }
   },
 
   {
