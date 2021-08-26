@@ -198,7 +198,7 @@ img + address {
   line-height: 1.2rem;
 }
 
-div > h1 {
+.hero-title {
   font-weight: normal;
   position: absolute;
   left: 7.5%;
@@ -206,18 +206,18 @@ div > h1 {
   font-size: 1.75rem;
 }
 
-h1 + p {
+.hero-text {
   line-height: 1.2rem;
   position: absolute;
   left: 7.5%;
   bottom: 30%;
 }
 
-h2 + p {
+.lineheight {
   line-height: 1.2rem;
 }
 
-p + button {
+.hero-button {
   position: absolute;
   left: 7.5%;
   bottom: 17%;
