@@ -36,24 +36,31 @@ div > img {
 }
 
 .row {
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .col-full {
   flex-basis: 100%;
 }
 
+.col-half {
+  flex-basis: 50%
+}
+
 .col-fifth {
   flex-basis: 20%;
 }
 
-.flex {
-  display: flex;
-}
-
 .justify-center {
   justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .padding-10 {
