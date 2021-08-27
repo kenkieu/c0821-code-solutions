@@ -1,0 +1,11 @@
+#timbl {
+  color: red;
+}
+
+#verou {
+  color: black !important;
+}
+
+* {
+  color: blue;
+}
