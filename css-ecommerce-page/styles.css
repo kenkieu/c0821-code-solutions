@@ -47,10 +47,6 @@ div > img {
   flex-basis: 100%;
 }
 
-.col-half {
-  flex-basis: 50%
-}
-
 .col-fifth {
   flex-basis: 20%;
 }
