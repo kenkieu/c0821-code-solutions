@@ -3,8 +3,9 @@ function addSuffixToAll(words, suffix) {
   var newWord = [];
   var i = 0;
   while (i < words.length) {
-    words[i] += suffix;
-    newWord.push(words[i]);
+    var word = words[i];
+    word += suffix;
+    newWord.push(word);
     i++;
   }
   return newWord;
