@@ -6,7 +6,6 @@ span,
 del {
   font-size: 0.7rem;
   font-weight: 600;
-
 }
 
 h1 {
@@ -21,12 +20,12 @@ div > img {
 
 .pink-highlight {
   border-radius: 3px;
-  background-color: #FFF2E7;
+  background-color: #fff2e7;
 }
 
 .gray-items {
-  color: #E0E0E0;
-  border-left: 1px solid #E0E0E0;
+  color: #e0e0e0;
+  border-left: 1px solid #e0e0e0;
   padding-left: 3px;
   font-weight: 400;
 }
@@ -42,12 +41,11 @@ div > img {
 }
 
 .col-full {
-  flex-basis: 100%
+  flex-basis: 100%;
 }
 
 .col-fifth {
   flex-basis: 20%;
-  padding: 10px;
 }
 
 .flex {
@@ -56,4 +54,8 @@ div > img {
 
 .justify-center {
   justify-content: center;
+}
+
+.padding-10 {
+  padding: 10px;
 }
