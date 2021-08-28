@@ -1,0 +1,3 @@
+/* exported lastChars */
+// input:
+// output:
