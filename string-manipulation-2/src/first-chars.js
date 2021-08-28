@@ -1,0 +1,3 @@
+/* exported firstChars */
+// input:
+// output:
