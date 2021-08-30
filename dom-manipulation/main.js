@@ -6,15 +6,15 @@ var $clickCount = document.querySelector('.click-count');
 $hotButton.addEventListener('click', function (event) {
   counter++;
   $clickCount.textContent = 'Click: ' + counter;
-  if (counter <= 4) {
+  if (counter <= 3) {
     $hotButton.className = 'hot-button cold';
-  } else if (counter >= 5 && counter <= 7) {
+  } else if (counter >= 4 && counter <= 6) {
     $hotButton.className = 'hot-button cool';
-  } else if (counter >= 8 && counter <= 10) {
+  } else if (counter >= 7 && counter <= 9) {
     $hotButton.className = 'hot-button tepid';
-  } else if (counter >= 11 && counter <= 13) {
+  } else if (counter >= 10 && counter <= 12) {
     $hotButton.className = 'hot-button warm';
-  } else if (counter >= 14 && counter <= 16) {
+  } else if (counter >= 13 && counter <= 15) {
     $hotButton.className = 'hot-button hot';
   } else {
     $hotButton.className = 'hot-button nuclear';
