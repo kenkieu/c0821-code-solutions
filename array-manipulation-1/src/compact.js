@@ -19,15 +19,25 @@ maintains order of truthy values
 // move value to output
 // return output
 
+// function compact(array) {
+//   var truthyArr = [];
+//   for (var i = 0; i < array.length; i++) {
+//     if (!Number.isNaN(array[i]) &&
+//      array[i] !== false &&
+//      array[i] !== null &&
+//      array[i] !== 0 &&
+//      array[i] !== undefined &&
+//      array[i] !== '') {
+//       truthyArr.push(array[i]);
+//     }
+//   }
+//   return truthyArr;
+// }
+
 function compact(array) {
   var truthyArr = [];
   for (var i = 0; i < array.length; i++) {
-    if (!Number.isNaN(array[i]) &&
-     array[i] !== false &&
-     array[i] !== null &&
-     array[i] !== 0 &&
-     array[i] !== undefined &&
-     array[i] !== '') {
+    if (array[i]) {
       truthyArr.push(array[i]);
     }
   }
