@@ -9,13 +9,12 @@
 // return output
 
 function capitalizeWord(word) {
+  if (word.toLowerCase() === 'javascript') {
+    return 'JavaScript';
+  }
   var str = word[0].toUpperCase();
   for (var i = 1; i < word.length; i++) {
-    if (word.toLowerCase() === 'javascript') {
-      return 'JavaScript';
-    } else {
-      str += word[i].toLowerCase();
-    }
+    str += word[i].toLowerCase();
   }
   return str;
 }
