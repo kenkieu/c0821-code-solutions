@@ -1,0 +1,3 @@
+/* exported dropRight */
+// input:
+// output:
