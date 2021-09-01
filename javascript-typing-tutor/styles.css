@@ -1,0 +1,46 @@
+* {
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 975px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-half {
+  flex-basis: 100%;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.viewport {
+  height: 100vh;
+}
+
+.text-correct {
+  color: rgb(84, 209, 84);
+}
+
+.underline {
+  border-bottom: 1px solid black;
+}
+
+.text-error {
+  color: red;
+}
