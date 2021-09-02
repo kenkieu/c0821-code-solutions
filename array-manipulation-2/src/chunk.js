@@ -3,19 +3,30 @@
 //input 2: number determining chunk size
 //output: array of arrays
 //create array to store arrays
-//
+//if no array length
+//return empty arr
+//for each iteration
+//create subArr storage
+//look at each item until the specified condition
+//push until we have a "chunk"
+//when condition is no longer true, push the chunk to the final array
+//repeat the process for length of the array
+//return the final array
+
 
 function chunk(array, size){
-  var arrB = [];
-  for(var i = 0; i < array.length; i++){
-    var arr = [];
-    for(var x = 0; x < array.length; x++){
-      arr.push(array[x])
-    }
-    console.log(arr)
-    return arr;
+  var outputArr = [];
+  if(!array.length) {
+    return outputArr;
   }
-var masterArr = arrB.concat(arr);
-console.log(masterArr)
-return masterArr;
+  for(var i = 0; i < array.length; i += size){
+    var subArr = [];
+    for(var x = i; x < i + size; x++){
+      if(x < array.length){
+        subArr.push(array[x])
+      }
+    }
+    outputArr.push(subArr)
+  }
+  return outputArr;
 }

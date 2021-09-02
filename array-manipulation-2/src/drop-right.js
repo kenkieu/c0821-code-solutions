@@ -18,6 +18,5 @@ function dropRight(array, number){
   for(var i = 0; i < array.length - number; i++) {
     arr.push(array[i])
   }
-  console.log(arr)
   return arr;
 }
