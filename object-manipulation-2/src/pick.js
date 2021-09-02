@@ -6,16 +6,14 @@
 // obtain each key in obj
 //
 function pick(source, keys) {
-  console.log(keys[0]);
   var obj = {};
-  var counter = 0;
-  for (var key in source) {
-    console.log(key);
-    if (key === keys[counter]) {
-      obj.key = source[key];
-      counter++;
+  for (var i = 0; i < keys.length; i++) {
+    for (var key in source) {
+      if (key === keys[i]) {
+        obj[key] = source[key];
+      }
     }
   }
-  // console.log(obj);
+  console.log(obj);
   return obj;
 }
