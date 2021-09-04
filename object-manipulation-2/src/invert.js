@@ -1,1 +1,3 @@
 /* exported invert */
+// input:
+// output:
