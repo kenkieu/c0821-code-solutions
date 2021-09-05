@@ -1,0 +1,44 @@
+.product-title {
+  font-weight: normal;
+  position: absolute;
+  left: 6%;
+  top: 25%;
+  font-size: 2rem;
+}
+
+.product-text {
+  line-height: 1.2rem;
+  position: absolute;
+  left: 6%;
+  bottom: 30%;
+}
+
+nav + hr {
+  margin-bottom: 4rem;
+}
+
+.product-sample-image {
+  width: 100%;
+}
+
+.link-text {
+  color: #408ec6;
+  text-decoration: none;
+}
+
+.product-sample-title {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #50514f;
+  line-height: 1.5rem;
+}
+
+.product-text-padding {
+  padding: 1rem 0 1rem 6rem;
+
+  /* border: solid 1px black; */
+}
+
+.product-row-padding {
+  padding: 3rem;
+}
