@@ -1,188 +1,19 @@
-.container {
-  width: 975px;
-  margin: 0 auto;
-}
-
-.row {
-  display: flex;
-  margin: 0 auto;
-  width: 85%;
-}
-
-.col-full {
-  flex-basis: 100%;
-}
-
-.col-half {
-  flex-basis: 50%;
-}
-
-.col-two-third {
-  flex-basis: calc(200% / 3);
-}
-
-.col-third {
-  flex-basis: calc(100% / 3);
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.lg-tb-padding {
-  padding: 4.8rem 0;
-}
-
-.med-tb-padding {
-  padding: 1.85rem 0;
-}
-
-.sm-tb-padding {
-  padding: 1rem 0;
-}
-
-.bg-off-white {
-  background-color: #fafafa;
-}
-
 footer.container {
   background-color: #525351;
 }
 
-.font-white {
-  color: white;
-}
-
-.font-gray {
-  color: #6e6e6e;
-}
-
 .subhead-font {
   font-size: 1.4rem;
-  font-weight: normal;
-}
-
-.small-font {
-  font-size: 0.8rem;
-}
-
-.medium-font {
-  font-size: 0.9rem;
-}
-
-.btn-style {
-  background-color: #294464;
-  color: white;
-  border-radius: 3px;
-  border-style: none;
-  height: 43px;
-  margin: 0.7rem 0;
-}
-
-.sm-btn-padding {
-  padding: 0 0.8rem;
-  font-size: 0.8rem;
-  height: 35px;
-}
-
-.plr-36 {
-  padding: 0 36px;
-}
-
-.nav-link {
-  color: #a0a0a0;
-  text-decoration: none;
-  font-size: 0.75rem;
-  padding: 1.15rem 1rem;
-}
-
-.lg-link {
-  font-size: 0.87rem;
-  text-decoration: none;
-  padding: 0 1.8rem 0 0;
-}
-
-.footer-link {
-  text-decoration: none;
-  line-height: 2rem;
-}
-
-.hero-image {
-  margin: 0 auto;
-  width: 100%;
-  height: 410px;
-  object-fit: cover;
-  overflow: hidden;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  margin: 0 auto;
-  width: 100%;
-  height: 410px;
+  font-weight: 500;
 }
 
 .sm-tb-padding > .col-full {
   position: relative;
 }
 
-.margin-10 {
-  margin: 0.6rem;
-}
-
 div > ul {
   list-style-type: none;
   margin: 0.5rem 0;
-}
-
-li {
-  display: inline-block;
-}
-
-hr {
-  border: 1px solid #f1f2f4;
-  margin: 0;
-}
-
-p,
-a,
-address,
-button {
-  font-family: "Avenir", sans-serif;
-}
-
-h1,
-h2 {
-  font-family: "Tiempos Headline", serif;
 }
 
 nav img {
@@ -211,10 +42,6 @@ img + address {
   position: absolute;
   left: 6%;
   bottom: 30%;
-}
-
-.lineheight {
-  line-height: 1.2rem;
 }
 
 .home-button {
