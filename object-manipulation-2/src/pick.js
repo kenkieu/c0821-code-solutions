@@ -12,10 +12,8 @@
 function pick(source, keys) {
   var outputObj = {};
   for (var i = 0; i < keys.length; i++) {
-    for (var key in source) {
-      if (key === keys[i] && source[key] !== undefined) {
-        outputObj[key] = source[key];
-      }
+    if (source[keys[i]] !== undefined) {
+      outputObj[keys[i]] = source[keys[i]];
     }
   }
   return outputObj;
