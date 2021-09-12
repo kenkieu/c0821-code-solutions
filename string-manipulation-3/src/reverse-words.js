@@ -1,32 +1,21 @@
 /* exported reverseWords */
 // input: string
 // output: string
+//* Create storage for output array
+//* Split each word up, and store
+//* Look at each item in input array
+//* Split word into letters, reverse order of letters, join into word
+//* Move each modified word into the output array
+//* Join the outputArr together
+//* Return string output
 
 function reverseWords(string) {
-  var word = '';
-  var reverseWord = '';
-  var strArr = [];
-  var reverseArr = [];
-  for (var i = 0; i < string.length; i++) {
-    if (string[i] !== ' ') {
-      word += string[i];
-    } else {
-      strArr.push(word);
-      word = '';
-    }
+  var outputArr = [];
+  var wordArr = string.split(' ');
+  for (var i = 0; i < wordArr.length; i++) {
+    var reverseWord = wordArr[i].split('').reverse().join('');
+    outputArr.push(reverseWord);
   }
-  strArr.push(word);
-  console.log(strArr);
-
-  // for (var x = 0; x < strArr.length; x++) {
-  //   // console.log(strArr[x]);
-  //   for (var y = strArr[x].length - 1; y >= 0; y--) {
-  //     // console.log(strArr[x][y]);
-  //     reverseArr.push(strArr[x][y]);
-  //     console.log(reverseArr);
-  //     reverseWord = reverseArr.join(' ');
-  //   }
-  // }
-  // console.log(reverseWord);
-  // return reverseWord;
+  var reversedString = outputArr.join(' ');
+  return reversedString;
 }
