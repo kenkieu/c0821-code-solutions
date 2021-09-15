@@ -13,7 +13,7 @@ Account.prototype.deposit = function (amount) {
   } else {
     return false;
   }
-}
+};
 
 Account.prototype.withdraw = function (amount) {
   if (Number.isInteger(amount) && Math.sign(amount) === 1) {
@@ -23,22 +23,22 @@ Account.prototype.withdraw = function (amount) {
   } else {
     return false;
   }
-}
+};
 
 Account.prototype.getBalance = function () {
   if (this.transactions.length > 0) {
     var deposits = 0;
     var withdrawals = 0;
-    for (i = 0; i < this.transactions.length; i++) {
+    for (var i = 0; i < this.transactions.length; i++) {
       if (this.transactions[i].type === 'deposit') {
-        deposits += this.transactions[i].amount
+        deposits += this.transactions[i].amount;
       } else {
-        withdrawals += this.transactions[i].amount
+        withdrawals += this.transactions[i].amount;
       }
     }
-    var sum = deposits - withdrawals
+    var sum = deposits - withdrawals;
     return sum;
   } else {
     return 0;
   }
-}
+};
