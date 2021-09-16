@@ -1,0 +1,61 @@
+img {
+  width: 60%;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-seventy-five {
+  flex-basis: 75%;
+}
+
+.column-twelve-and-half {
+  flex-basis: 12.5%;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.border-black {
+  border: 5px solid black;
+}
+
+.chevron,
+.chevron:hover {
+  font-size: 3rem;
+}
+
+.chevron:hover {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.dots {
+  font-size: 1.3rem;
+  padding: 2rem;
+}
+
+.plr-third-rem {
+  padding: 0 0.3rem;
+}
