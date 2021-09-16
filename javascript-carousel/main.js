@@ -14,9 +14,6 @@ function handlePrevImage(event) {
     dotMarker();
   } else {
     counter = 5;
-    counter--;
-    imageAttr();
-    dotMarker();
   }
 }
 
@@ -27,9 +24,6 @@ function handleNextImage(event) {
     dotMarker();
   } else {
     counter = -1;
-    counter++;
-    imageAttr();
-    dotMarker();
   }
 }
 
@@ -70,9 +64,7 @@ function handleDotClick(event) {
 }
 
 function intervalReset() {
-  intervalId = setInterval(function () {
-    handleNextImage();
-  }, 3 * 1000);
+  intervalId = setInterval(handleNextImage, 3 * 1000);
 }
 
 intervalReset();
