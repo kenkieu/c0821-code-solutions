@@ -1,12 +1,19 @@
 var $chevronLeft = document.querySelector('.fa-chevron-left');
 var $chevronRight = document.querySelector('.fa-chevron-right');
 var $img = document.querySelector('img');
+var $dotContainer = document.querySelector('.dots');
 var $dots = document.querySelectorAll('.fa-circle');
 var imageArr = ['images/001.png', 'images/004.png', 'images/007.png', 'images/025.png', 'images/039.png'];
 var counter = 0;
+var intervalId = null;
 
 function handlePrevImage(event) {
   if (counter > 0) {
+    counter--;
+    imageAttr();
+    dotMarker();
+  } else {
+    counter = 5;
     counter--;
     imageAttr();
     dotMarker();
@@ -18,12 +25,19 @@ function handleNextImage(event) {
     counter++;
     imageAttr();
     dotMarker();
+  } else {
+    counter = -1;
+    counter++;
+    imageAttr();
+    dotMarker();
   }
 }
 
 function imageAttr() {
   $img.setAttribute('src', imageArr[counter]);
   $img.setAttribute('data-img-id', counter);
+  clearInterval(intervalId);
+  intervalReset();
 }
 
 function dotMarker() {
@@ -36,5 +50,33 @@ function dotMarker() {
   }
 }
 
+function handleDotClick(event) {
+  if (!event.target.matches('i')) {
+    return;
+  } else if (event.target.matches('i')) {
+    $img.setAttribute('src', imageArr[event.target.getAttribute('data-img-id')]);
+    $img.setAttribute('data-img-id', event.target.getAttribute('data-img-id'));
+    counter = event.target.getAttribute('data-img-id');
+  }
+  for (var i = 0; i < $dots.length; i++) {
+    if (event.target.getAttribute('data-img-id') === $dots[i].getAttribute('data-img-id')) {
+      $dots[i].className = 'fas fa-circle plr-third-rem';
+    } else {
+      $dots[i].className = 'far fa-circle plr-third-rem';
+    }
+  }
+  clearInterval(intervalId);
+  intervalReset();
+}
+
+function intervalReset() {
+  intervalId = setInterval(function () {
+    handleNextImage();
+  }, 3 * 1000);
+}
+
+intervalReset();
+
 $chevronLeft.addEventListener('click', handlePrevImage);
 $chevronRight.addEventListener('click', handleNextImage);
+$dotContainer.addEventListener('click', handleDotClick);
