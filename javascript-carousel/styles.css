@@ -39,20 +39,26 @@ img {
 }
 
 .border-black {
-  border: 5px solid black;
+  border: 6px solid black;
 }
 
-.chevron,
-.chevron:hover {
+.chevron {
   font-size: 3rem;
 }
 
-.chevron:hover {
-  color: rgba(0, 0, 0, 0.75);
+
+.fa-circle:hover, .fas {
+  transform: scale(1.1);
+   cursor: pointer;
+}
+
+.chevron:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .dots {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 2rem;
 }
 
