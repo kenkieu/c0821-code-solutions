@@ -15,6 +15,8 @@ function handlePrevImage(event) {
   } else {
     counter = 5;
   }
+  imageAttr();
+  dotMarker();
 }
 
 function handleNextImage(event) {
@@ -23,8 +25,10 @@ function handleNextImage(event) {
     imageAttr();
     dotMarker();
   } else {
-    counter = -1;
+    counter = 0;
   }
+  imageAttr();
+  dotMarker();
 }
 
 function imageAttr() {
