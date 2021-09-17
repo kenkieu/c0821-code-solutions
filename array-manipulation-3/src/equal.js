@@ -1,10 +1,9 @@
 /* exported equal */
-//input 1: array
-//input 2: array
-//output: boolean
-
-//if the length of the first is not equal to the second
-//return false
+// input 1: array
+// input 2: array
+// output: boolean
+// if the length of the first is not equal to the second
+// return false
 // look at each character of both first and second at the same position
 // if it is not equal
 // return false
