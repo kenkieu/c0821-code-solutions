@@ -8,6 +8,7 @@
 // if it is not equal
 // return false
 // return true for remaining
+
 function equal(first, second) {
   if (first.length !== second.length) {
     return false;

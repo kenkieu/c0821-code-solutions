@@ -18,8 +18,8 @@ function zip(first, second) {
     for (var x = 0; x < second.length; x++) {
       var subArr = [];
       if (i === x) {
-        subArr.push(first[i])
-        subArr.push(second[i])
+        subArr.push(first[i]);
+        subArr.push(second[i]);
         outputArr.push(subArr);
       }
     }
