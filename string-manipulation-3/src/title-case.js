@@ -25,7 +25,6 @@
 // otherwise add capitalize and add the new word to newstring, but do not add a space
 // return the newstring
 
-
 function titleCase(string) {
   var newString = '';
   var splitString = string.split(' ');
@@ -34,13 +33,13 @@ function titleCase(string) {
     var previousWord = splitString[i - 1];
     if (currentWord === 'api') {
       newString += 'API';
-    } else if (currentWord.includes("javascript")) {
-      if (currentWord.includes(":")) {
-        newString += "JavaScript: ";
+    } else if (currentWord.includes('javascript')) {
+      if (currentWord.includes(':')) {
+        newString += 'JavaScript:' + ' ';
       } else {
-        newString += 'JavaScript ';
+        newString += 'JavaScript' + ' ';
       }
-    } else if (currentWord.length < 4 && (previousWord && !previousWord.includes(":")) && currentWord !== 'web') {
+    } else if (currentWord.length < 4 && (previousWord && !previousWord.includes(':')) && currentWord !== 'web') {
       newString += currentWord.toLowerCase() + ' ';
     } else if (currentWord.includes('-')) {
       var hyphenWord = currentWord.split('-');
