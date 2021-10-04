@@ -13,6 +13,11 @@
 // return outputArr
 
 function zip(first, second) {
+  if(first.length < second.length){
+    var loopedArr = first;
+  } else{
+    var loopedArr = second;
+  }
   var outputArr = [];
   for (var i = 0; i < first.length; i++) {
     for (var x = 0; x < second.length; x++) {
@@ -24,5 +29,6 @@ function zip(first, second) {
       }
     }
   }
+  console.log(outputArr)
   return outputArr;
 }
