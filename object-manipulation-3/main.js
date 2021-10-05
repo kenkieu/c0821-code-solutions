@@ -3,7 +3,18 @@ console.log('Lodash is loaded:', typeof _ !== 'undefined');
 // set highscore to 0
 // create storage for winning player
 // create storage for player list
-// create deck of cards
+// create deck variable with empty array literal
+// create function that will generate deck of cards
+// create array of ranks
+// create array of suits
+// define a for loop that will loop over each card rank
+// within each rank assign each suit (club clover diamond heart)
+// if the rank is a number, assign the number value as the same rank
+// otherwise if it's ace then 11
+// all other cases, value is 10
+// push the card into the deck
+// return the deck of cards
+// call the function to create the deck
 // shuffle deck
 // deal 2 cards per player
 // each time pull those cards from the deck
@@ -22,60 +33,31 @@ var playerArr = [
   { name: 'Bulma', hand: [], score: 0 }
 ];
 
-var deck = [
-  { face: 'ace', rank: 'club', value: 11 },
-  { face: 'ace', rank: 'clover', value: 11 },
-  { face: 'ace', rank: 'diamond', value: 11 },
-  { face: 'ace', rank: 'heart', value: 11 },
-  { face: '2', rank: 'club', value: 2 },
-  { face: '2', rank: 'clover', value: 2 },
-  { face: '2', rank: 'diamond', value: 2 },
-  { face: '2', rank: 'heart', value: 2 },
-  { face: '3', rank: 'club', value: 3 },
-  { face: '3', rank: 'clover', value: 3 },
-  { face: '3', rank: 'diamond', value: 3 },
-  { face: '3', rank: 'heart', value: 3 },
-  { face: '4', rank: 'club', value: 4 },
-  { face: '4', rank: 'clover', value: 4 },
-  { face: '4', rank: 'diamond', value: 4 },
-  { face: '4', rank: 'heart', value: 4 },
-  { face: '5', rank: 'club', value: 5 },
-  { face: '5', rank: 'clover', value: 5 },
-  { face: '5', rank: 'diamond', value: 5 },
-  { face: '5', rank: 'heart', value: 5 },
-  { face: '6', rank: 'club', value: 6 },
-  { face: '6', rank: 'clover', value: 6 },
-  { face: '6', rank: 'diamond', value: 6 },
-  { face: '6', rank: 'heart', value: 6 },
-  { face: '7', rank: 'club', value: 7 },
-  { face: '7', rank: 'clover', value: 7 },
-  { face: '7', rank: 'diamond', value: 7 },
-  { face: '7', rank: 'heart', value: 7 },
-  { face: '8', rank: 'club', value: 8 },
-  { face: '8', rank: 'clover', value: 8 },
-  { face: '8', rank: 'diamond', value: 8 },
-  { face: '8', rank: 'heart', value: 8 },
-  { face: '9', rank: 'club', value: 9 },
-  { face: '9', rank: 'clover', value: 9 },
-  { face: '9', rank: 'diamond', value: 9 },
-  { face: '9', rank: 'heart', value: 9 },
-  { face: '10', rank: 'club', value: 10 },
-  { face: '10', rank: 'clover', value: 10 },
-  { face: '10', rank: 'diamond', value: 10 },
-  { face: '10', rank: 'heart', value: 10 },
-  { face: 'Jack', rank: 'club', value: 10 },
-  { face: 'Jack', rank: 'clover', value: 10 },
-  { face: 'Jack', rank: 'diamond', value: 10 },
-  { face: 'Jack', rank: 'heart', value: 10 },
-  { face: 'Queen', rank: 'club', value: 10 },
-  { face: 'Queen', rank: 'clover', value: 10 },
-  { face: 'Queen', rank: 'diamond', value: 10 },
-  { face: 'Queen', rank: 'heart', value: 10 },
-  { face: 'King', rank: 'club', value: 10 },
-  { face: 'King', rank: 'clover', value: 10 },
-  { face: 'King', rank: 'diamond', value: 10 },
-  { face: 'King', rank: 'heart', value: 10 }
-];
+var deck = [];
+
+function createDeck() {
+  var ranks = ['ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'jack', 'queen', 'king'];
+  var suits = ['club', 'clover', 'diamond', 'heart'];
+
+  for (var i = 0; i < ranks.length; i++) {
+    for (var x = 0; x < suits.length; x++) {
+      var card = {};
+      card.face = ranks[i];
+      card.suits = suits[x];
+      if (typeof ranks[i] === 'number') {
+        card.value = ranks[i];
+      } else if (card.face === 'ace') {
+        card.value = 11;
+      } else {
+        card.value = 10;
+      }
+      deck.push(card);
+    }
+  }
+  return deck;
+}
+
+createDeck();
 
 var shuffledDeck = _.shuffle(deck);
 
