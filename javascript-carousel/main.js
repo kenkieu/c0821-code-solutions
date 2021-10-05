@@ -8,10 +8,9 @@ var counter = 0;
 var intervalId = null;
 
 function handlePrevImage(event) {
+
   if (counter > 0) {
     counter--;
-    imageAttr();
-    dotMarker();
   } else {
     counter = 5;
   }
@@ -22,8 +21,6 @@ function handlePrevImage(event) {
 function handleNextImage(event) {
   if (counter < 4) {
     counter++;
-    imageAttr();
-    dotMarker();
   } else {
     counter = 0;
   }
