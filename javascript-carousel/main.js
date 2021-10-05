@@ -8,7 +8,6 @@ var counter = 0;
 var intervalId = null;
 
 function handlePrevImage(event) {
-
   if (counter > 0) {
     counter--;
   } else {
