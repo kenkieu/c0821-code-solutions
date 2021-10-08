@@ -31,11 +31,7 @@ app.get('/api/grades', (req, res) => {
 });
 
 app.delete('/api/grades/:id', (req, res) => {
-  for (key in grades) {
-    if (key === req.params.id) {
-      delete grades[key];
-    }
-  }
+  delete grades[req.params.id];
   res.sendStatus(204);
 });
 
