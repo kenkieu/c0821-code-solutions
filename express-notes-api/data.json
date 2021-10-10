@@ -1,5 +1,5 @@
 {
-  "nextId": 15,
+  "nextId": 20,
   "notes": {
     "2": {
       "id": 2,
@@ -21,13 +21,13 @@
       "content": "The largest mammal is the blue whale.",
       "id": 10
     },
-    "11": {
-      "content": "boooop.",
-      "id": 11
+    "18": {
+      "content": "BOO, it's a ghost!",
+      "id": 18
     },
-    "15": {
-      "content": "booop snoot.",
-      "id": 15
+    "19": {
+      "content": "Zombies love eating brains!",
+      "id": 19
     }
   }
 }
