@@ -4,8 +4,6 @@ const app = express();
 const data = require('./data');
 const fs = require('fs');
 
-console.log(data);
-
 app.use(express.json());
 
 // READ
@@ -50,7 +48,6 @@ app.post('/api/notes', (req, res) => {
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-  console.log(req.params);
   if (req.params.id < 1) {
     res.status(400).json({ error: 'id must be a positive integer' });
   } else if (!data.notes[req.params.id]) {
@@ -61,7 +58,6 @@ app.delete('/api/notes/:id', (req, res) => {
     res.status(500).json({ error: 'An unexpected error has occurred' });
   } else if (req.params.id) {
     delete data.notes[req.params.id];
-    console.log(data);
     const newData = JSON.stringify(data, null, 2);
     fs.writeFile('data.json', newData, err => {
       if (err) throw err;
@@ -73,6 +69,8 @@ app.delete('/api/notes/:id', (req, res) => {
 app.put('/api/notes/:id', (req, res) => {
   if (req.params.id < 1) {
     res.status(400).json({ error: 'id must be a positive integer' });
+  } else if (!req.body.content) {
+    res.status(400).json({ error: 'content is a required field' });
   } else if (!data.notes[req.params.id]) {
     res.status(404).json({ error: `cannot find note with id ${req.params.id}` });
   }
@@ -82,15 +80,13 @@ app.put('/api/notes/:id', (req, res) => {
   } else if (req.params.id) {
     // review
     data.notes[req.params.id] = req.body;
-    data.notes[data.nextId].id = data.nextId;
+    data.notes[req.params.id].id = parseInt(req.params.id);
     const newData = JSON.stringify(data, null, 2);
     fs.writeFile('data.json', newData, err => {
       if (err) throw err;
     });
-    // review
-    res.status(200).json();
+    res.status(200).json(data.notes[req.params.id]);
   }
-
 });
 
 app.listen(3000, () => console.log('Creepin on port 3000!'));
