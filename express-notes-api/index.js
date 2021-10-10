@@ -70,4 +70,27 @@ app.delete('/api/notes/:id', (req, res) => {
   }
 });
 
+app.put('/api/notes/:id', (req, res) => {
+  if (req.params.id < 1) {
+    res.status(400).json({ error: 'id must be a positive integer' });
+  } else if (!data.notes[req.params.id]) {
+    res.status(404).json({ error: `cannot find note with id ${req.params.id}` });
+  }
+  // Condition???
+  else if (!data) {
+    res.status(500).json({ error: 'An unexpected error has occurred' });
+  } else if (req.params.id) {
+    // review
+    data.notes[req.params.id] = req.body;
+    data.notes[data.nextId].id = data.nextId;
+    const newData = JSON.stringify(data, null, 2);
+    fs.writeFile('data.json', newData, err => {
+      if (err) throw err;
+    });
+    // review
+    res.status(200).json();
+  }
+
+});
+
 app.listen(3000, () => console.log('Creepin on port 3000!'));
