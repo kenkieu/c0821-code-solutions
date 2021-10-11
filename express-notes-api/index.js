@@ -35,8 +35,8 @@ app.post('/api/notes', (req, res) => {
       if (err) {
         res.status(500).json({ error: 'An unexpected error has occurred' });
       } else {
-        res.status(201).json(data.notes[data.nextId]);
         data.nextId++;
+        res.status(201).json(data.notes[data.nextId]);
       }
     });
   }
