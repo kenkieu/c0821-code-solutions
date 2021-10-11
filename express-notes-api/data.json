@@ -1,0 +1,49 @@
+{
+  "nextId": 31,
+  "notes": {
+    "2": {
+      "id": 2,
+      "content": "The event loop, this, closures, and prototypal inheritance are special about JavaScript."
+    },
+    "5": {
+      "id": 5,
+      "content": "In JavaScript, the value of `this` is determined when a function is called; not when it is defined."
+    },
+    "6": {
+      "id": 6,
+      "content": "A closure is formed when a function retains access to variables in its lexical scope."
+    },
+    "9": {
+      "content": "Crawfish belong to the arthopoda phylum, same as cockroaches.",
+      "id": 9
+    },
+    "10": {
+      "content": "The largest mammal is the blue whale.",
+      "id": 10
+    },
+    "18": {
+      "content": "BOO, it's a ghost!",
+      "id": 18
+    },
+    "19": {
+      "content": "Zombies love eating brains!",
+      "id": 19
+    },
+    "21": {
+      "content": "My content was different before!",
+      "id": 21
+    },
+    "22": {
+      "content": "Is a hot pocket a meal or a snack?",
+      "id": 22
+    },
+    "29": {
+      "content": "Hello World is a generic phrase.",
+      "id": 29
+    },
+    "30": {
+      "content": "Coffee makes the world go round.",
+      "id": 30
+    }
+  }
+}
