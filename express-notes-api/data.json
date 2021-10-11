@@ -1,5 +1,5 @@
 {
-  "nextId": 20,
+  "nextId": 23,
   "notes": {
     "2": {
       "id": 2,
@@ -28,6 +28,14 @@
     "19": {
       "content": "Zombies love eating brains!",
       "id": 19
+    },
+    "21": {
+      "content": "My content was different before!",
+      "id": 21
+    },
+    "22": {
+      "content": "Is a hot pocket a meal or a snack?",
+      "id": 22
     }
   }
 }
