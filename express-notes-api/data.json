@@ -1,5 +1,5 @@
 {
-  "nextId": 23,
+  "nextId": 31,
   "notes": {
     "2": {
       "id": 2,
@@ -37,9 +37,13 @@
       "content": "Is a hot pocket a meal or a snack?",
       "id": 22
     },
-    "23": {
-      "content": "Mic check... 1... 2... 3...",
-      "id": 23
+    "29": {
+      "content": "Hello World is a generic phrase.",
+      "id": 29
+    },
+    "30": {
+      "content": "Coffee makes the world go round.",
+      "id": 30
     }
   }
 }
