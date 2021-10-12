@@ -1,4 +1,4 @@
 select "actorId",
-       "firstName",
-       "lastName"
+      "firstName",
+      "lastName"
 from "actors";
