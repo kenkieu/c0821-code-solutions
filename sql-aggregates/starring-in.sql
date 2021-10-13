@@ -1,9 +1,3 @@
--- categories // categoryId
--- filmCategory //categoryId >>> filmId
--- castMembers filmId >>> actorId
--- actors // actorId
---
-
 select "categories"."name",
   count("filmCategory"."categoryId") as "filmAppearances"
   from "categories"

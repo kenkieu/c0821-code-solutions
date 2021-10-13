@@ -1,5 +1,3 @@
--- customers >>> customerId
--- payments // amount
 select "firstName",
       "lastName",
   sum("payments"."amount") as "totalSpent"
