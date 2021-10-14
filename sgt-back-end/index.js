@@ -20,7 +20,6 @@ app.get('/api/grades', (req, res) => {
            "createdAt"
     from "grades"
   `;
-
   db.query(sql)
     .then(result => {
       const grades = result.rows;
@@ -65,7 +64,6 @@ app.post('/api/grades', (req, res) => {
     db.query(sql, params)
       .then(result => {
         const grade = result.rows[0];
-        // console.log('grade:', grade);
         res.status(201).json(grade);
       })
       .catch(err => {
@@ -130,7 +128,6 @@ app.put('/api/grades/:gradeId', (req, res) => {
 });
 
 app.delete('/api/grades/:gradeId', (req, res) => {
-  // const gradeId = parseInt(req.params.gradeId);
   let { gradeId } = req.params;
   gradeId = parseInt(gradeId);
   if (!Number.isInteger(gradeId) || gradeId < 0) {
@@ -141,7 +138,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
     const params = [];
     params.push(gradeId);
     const sql = `
-    delete from "grades"
+    delete from "gradeZs"
     where "gradeId" = $1
     returning *;
     `;
