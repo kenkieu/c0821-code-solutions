@@ -138,7 +138,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
     const params = [];
     params.push(gradeId);
     const sql = `
-    delete from "gradeZs"
+    delete from "grades"
     where "gradeId" = $1
     returning *;
     `;
