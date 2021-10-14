@@ -52,10 +52,7 @@ app.post('/api/grades', (req, res) => {
       error: '"score" is a required field'
     });
   } else {
-    const params = [];
-    for (const key in newStudent) {
-      params.push(newStudent[key]);
-    }
+    const params = [newStudent.name, newStudent.course, newStudent.score];
     const sql = `
       insert into "grades" ("name", "course", "score")
         values($1, $2, $3)
@@ -95,10 +92,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
       error: '"score" is a required field'
     });
   } else {
-    const params = [];
-    for (const key in updateStudent) {
-      params.push(updateStudent[key]);
-    }
+    const params = [updateStudent.name, updateStudent.course, updateStudent.score, updateStudent.gradeId];
     const sql = `
       update "grades"
         set "name" = $1,
@@ -135,8 +129,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
       error: '"gradeId" must be a positive integer'
     });
   } else {
-    const params = [];
-    params.push(gradeId);
+    const params = [gradeId];
     const sql = `
     delete from "grades"
     where "gradeId" = $1
