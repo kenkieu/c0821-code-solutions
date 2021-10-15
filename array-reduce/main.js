@@ -18,16 +18,16 @@ const traits = [
 ];
 
 const sum = numbers.reduce((acc, cur) => acc + cur);
-console.log(sum);
+console.log('sum:', sum);
 
 const product = numbers.reduce((acc, cur) => acc * cur);
-console.log(product);
+console.log('product:', product);
 
 const balance = account.reduce((acc, cur) => cur.type === 'deposit' ? acc + cur.amount : acc - cur.amount, 0);
-console.log(balance);
+console.log('balance:', balance);
 
 const composite = traits.reduce((obj, cur) => {
   const newObj = Object.assign(obj, cur);
   return newObj;
 }, {});
-console.log(composite);
+console.log('composite:', composite);
