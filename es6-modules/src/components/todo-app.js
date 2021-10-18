@@ -1,10 +1,5 @@
-// const { createElement, noop } = require('../lib');
 import { createElement, noop } from '../lib';
-
-// const TodoList = require('./todo-list');
 import TodoList from './todo-list';
-
-// const TodoForm = require('./todo-form');
 import TodoForm from './todo-form';
 
 class TodoApp {
@@ -57,5 +52,4 @@ class TodoApp {
   }
 }
 
-// module.exports = TodoApp;
 export default TodoApp;
