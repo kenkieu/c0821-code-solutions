@@ -2,11 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class CustomButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.props = props;
-  }
-
   render() {
     return (
       <button>{this.props.text}</button>
