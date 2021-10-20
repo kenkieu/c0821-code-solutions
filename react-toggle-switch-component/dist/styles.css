@@ -14,10 +14,6 @@
   position: relative;
 }
 
-.status {
-  display: flex;
-}
-
 .active {
   right: 27px;
 }
