@@ -1,0 +1,34 @@
+button {
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+}
+
+.purple {
+  background-color: #351c74;
+  color: white;
+}
+
+.light-purple {
+  background-color: #674ea7;
+  color: white;
+}
+
+.salmon {
+  background-color: #e06666;
+  color: black;
+}
+
+.orange {
+  background-color: #f6b26a;
+  color: black;
+}
+
+.yellow {
+  background-color: #ff0;
+  color: black;
+}
+
+.white {
+  background-color: #fff;
+  color: black;
+}
