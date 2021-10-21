@@ -1,0 +1,36 @@
+.switch-housing {
+  width: 60px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.switch {
+  width: 29px;
+  height: 29px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+}
+
+.active {
+  right: 27px;
+}
+
+.inactive {
+  right: 64px;
+}
+
+.green {
+  background-color: green;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
