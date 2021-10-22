@@ -1,0 +1,27 @@
+.fas.fa-bars {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+.menu-header {
+  margin-left: 40px;
+}
+
+.menu-container {
+  border: 2px solid black;
+  border-radius: 3px;
+  height: 100vh;
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+}
