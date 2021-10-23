@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.accordion {
+  width: 400px;
+}
+
+.accordion-title {
+  border-radius: 2px;
+  border: solid 2px black;
+  background-color: #ddd;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.accordion-description {
+  border-radius: 2px;
+  border: solid 2px black;
+  padding: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
