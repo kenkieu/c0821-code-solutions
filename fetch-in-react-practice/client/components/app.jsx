@@ -46,17 +46,18 @@ export default class App extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify()
+      body: JSON.stringify(newTodo)
     })
       .then(res => res.json())
       .then(data => {
         this.setState(
-          { todos: data.concat(this.state.todos) }
+          { todos: this.state.todos.concat(data) }
         );
       });
   }
 
   toggleCompleted(todoId) {
+    console.log('todoId:', todoId);
     /**
      * Find the index of the todo with the matching todoId in the state array.
      * Get its "isCompleted" status.
@@ -74,10 +75,32 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
+
+    const todoCompletionStatus =
+      this.state.todos.find(
+        todo => todo.todoId === todoId)
+        .isCompleted;
+
+    const requestBody = { isCompleted: !todoCompletionStatus };
+
+    fetch(`/api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        const indexId = this.state.todos.findIndex(todo => todo.todoId === todoId);
+        console.log(indexId);
+        this.setState({ todos: this.state.todos.splice(indexId, 1, data) });
+        console.log('After setting:', this.state.todos);
+      });
   }
 
   render() {
-    console.log(this.state.todos);
     return (
       <div className="container">
         <div className="row">
