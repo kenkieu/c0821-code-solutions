@@ -57,7 +57,6 @@ export default class App extends React.Component {
   }
 
   toggleCompleted(todoId) {
-    console.log('todoId:', todoId);
     /**
      * Find the index of the todo with the matching todoId in the state array.
      * Get its "isCompleted" status.
@@ -76,12 +75,8 @@ export default class App extends React.Component {
      * And specify the "Content-Type" header as "application/json"
      */
 
-    const todoCompletionStatus =
-      this.state.todos.find(
-        todo => todo.todoId === todoId)
-        .isCompleted;
-
-    const requestBody = { isCompleted: !todoCompletionStatus };
+    const { isCompleted } = this.state.todos.find(todo => todo.todoId === todoId);
+    const requestBody = { isCompleted: !isCompleted };
 
     fetch(`/api/todos/${todoId}`, {
       method: 'PATCH',
@@ -92,11 +87,10 @@ export default class App extends React.Component {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         const indexId = this.state.todos.findIndex(todo => todo.todoId === todoId);
-        console.log(indexId);
-        this.setState({ todos: this.state.todos });
-        // console.log('After setting:', this.state.todos);
+        const todoStateCopy = this.state.todos.slice();
+        todoStateCopy.splice(indexId, 1, data);
+        this.setState({ todos: todoStateCopy });
       });
   }
 
