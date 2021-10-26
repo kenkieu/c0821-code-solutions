@@ -95,8 +95,8 @@ export default class App extends React.Component {
         console.log(data);
         const indexId = this.state.todos.findIndex(todo => todo.todoId === todoId);
         console.log(indexId);
-        this.setState({ todos: this.state.todos.splice(indexId, 1, data) });
-        console.log('After setting:', this.state.todos);
+        this.setState({ todos: this.state.todos });
+        // console.log('After setting:', this.state.todos);
       });
   }
 
