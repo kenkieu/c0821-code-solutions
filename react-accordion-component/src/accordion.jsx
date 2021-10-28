@@ -20,7 +20,7 @@ class Accordion extends React.Component {
       return (
       <div className={'accordion'} key={topic.name}>
         <div onClick={this.selectTopic} className={'accordion-title'}>{topic.name}</div>
-        {topic.name === this.state.openTopic ? <div className={'accordion-description'}>{topic.description}</div> : null}
+        {topic.name === this.state.openTopic && <div className={'accordion-description'}>{topic.description}</div>}
       </div>
       );
     });
