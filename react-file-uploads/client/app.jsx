@@ -26,7 +26,13 @@ export default class App extends React.Component {
       body: formData
     };
     fetch('/api/uploads', req)
-      .then(res => res.json());
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        this.setState({ caption: '' });
+        this.fileInputRef.current.value = null;
+      })
+      .catch(err => console.error(err));
     /**
      * Prevent the browser's default behavior for form submissions.
      *
