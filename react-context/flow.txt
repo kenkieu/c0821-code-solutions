@@ -1,0 +1,58 @@
+//User can sign up.
+
+Render method of the App component runs:
+  If the isAuthorizing state is a falsy value
+    AppContext is returned which includes PageContainer, which runs the renderPage method
+    The renderPage method assigns the path property of the route object to const var path
+        if path is the string sign-in, or sign up it returns React Element type Auth
+        Auth component's render method destructures this.context.user, this.context.route, and this.context.handleSignIn, and assigns those to the const var user, route and handleSignIn
+        Given the ternary expression route.path === 'sign in' is false, the string create an account is assigned to const var welcomeMessage
+        The AuthPage is returned with all react elements and with react element AuthForm
+         AuthForm component's render includes ternaries for if logging in or signing up and stores into variable
+         Changes text to reflect a new user
+         - welcomeMessage is Create an account...
+         - alternateActionHref is Sign in Instead
+         - submitButtonText is Register
+      handleSubmit is called when the form submits and this.props.action (string sign up) is assigned to action
+      fetch is called with the path of sign-in, and req is passed as the second argument to indicate POST and content type as JSON
+        promise is returned from fetch, and then method is called on it which parses the body text as JSON
+        then method is called on the return of the json method
+          if the action is sign up then 'sign-in' is assgined to hash property of the location property of the window object
+          this leads the user to the sign in page
+
+//User can sign in.
+
+Render method of the App component runs:
+  If the isAuthorizing state is a falsy value
+    AppContext is returned which includes PageContainer, which runs the renderPage method
+    The renderPage method assigns the path property of the route object to const var path
+      if path is the string sign-in, or sign up it returns React Element type Auth
+      Given the ternary expression route.path === 'sign in' is true, the string please sign in to continue is assigned to const var welcomeMessage
+      The AuthPage is returned with all react elements and with react element AuthForm
+        AuthForm component's render includes ternaries for if logging in or signing up and stores into variable
+          Changes text to reflect a new user
+        - welcomeMessage is Please sign in...
+        - alternateActionHref is Register Now
+        - submitButtonText is Log In
+      handleSubmit is called when the form submits and this.props.action (string sign in) is assigned to action
+        fetch is called with the path of sign-in, and req is passed as the second argument to indicate POST and content type as JSON
+        promise is returned from fetch, and then method is called on it which parses the body text as JSON
+        then method is called on the return of the json method
+          if the action is sign in, a check for result.user and result.token takes place (both need to be truthy)
+          the onSignIn method of the props object is called with the result of the userId, username, and token
+           - onSignIn prop is passed from AppContext.Provider as part of the value, and AuthPage passes the prop to AuthForm
+      handleChange is called onChange and detects the key inputs for username and password, and sets it as a state
+
+//User can stay signed in (even if they refresh the page).
+
+  handleSignIn sets the token to localStorage so the user's information is saved
+  User's id and username is also stored in app's state
+  when the page is refreshed
+  The hash is set inside the this.state.route
+  The componentDidMount is called, and the token and user is pulled from localStorage, and isAuthorizing is set to false
+
+//User can sign out.
+
+In the nav component, the render method is called and it creates the button for sign out
+The handleSignOut method from the app component is passed to the button react element, and set onClick
+handleSignOut is called on click, and removes the token from local storage, and sets user to none in state
