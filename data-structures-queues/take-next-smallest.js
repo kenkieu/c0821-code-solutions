@@ -4,12 +4,16 @@
 // peek at secondValue and assign to variable
 // if firstValue is undefined, return undefined
 // if secondValue is undefined, return firstValue
-// if firstValue !== undefined && secondValue is !== undefined (exist)
-// if
+// while firstValue is greater or equal to secondValue
+// // reassign new queue.dequeue() to firstValue;
+// // move firstValue to the back with enqueue
+// // peek the secondValue so the loop knows when to end
+// // when the second value is no longer smaller than first
+// return firstValue
 
 function takeNextSmallest(queue) {
-  const firstValue = queue.dequeue();
-  const secondValue = queue.peek();
+  let firstValue = queue.dequeue();
+  let secondValue = queue.peek();
 
   if (firstValue === undefined) {
     return undefined;
@@ -17,4 +21,10 @@ function takeNextSmallest(queue) {
   if (secondValue === undefined) {
     return firstValue;
   }
+  while (firstValue >= secondValue) {
+    queue.enqueue(firstValue);
+    firstValue = queue.dequeue();
+    secondValue = queue.peek();
+  }
+  return firstValue;
 }
