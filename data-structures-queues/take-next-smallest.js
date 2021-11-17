@@ -17,13 +17,4 @@ function takeNextSmallest(queue) {
   if (secondValue === undefined) {
     return firstValue;
   }
-  if (firstValue !== undefined && secondValue !== undefined) {
-    while (queue.peek() >= firstValue) {
-      const value = queue.dequeue();
-      queue.enqueue(value);
-      // console.log(queue.print());
-    }
-    console.log(queue.dequeue());
-    // return queue.dequeue();
-  }
 }
