@@ -5,8 +5,8 @@
 // if firstValue is undefined, return undefined
 // if secondValue is undefined, return firstValue
 // while firstValue is greater or equal to secondValue
-// // reassign new queue.dequeue() to firstValue;
 // // move firstValue to the back with enqueue
+// // reassign new queue.dequeue() to firstValue
 // // peek the secondValue so the loop knows when to end
 // // when the second value is no longer smaller than first
 // return firstValue
