@@ -1,3 +1,9 @@
+const $tabContainer = document.querySelector('.tab-container');
+const $tab = document.querySelectorAll('.tab');
+const $view = document.querySelectorAll('.view');
+
+$tabContainer.addEventListener('click', handleClick);
+
 function handleClick(event) {
   if (event.target.matches('.tab')) {
     let tabView = '';
@@ -18,9 +24,3 @@ function handleClick(event) {
     }
   }
 }
-
-var $tabContainer = document.querySelector('.tab-container');
-var $tab = document.querySelectorAll('.tab');
-var $view = document.querySelectorAll('.view');
-
-$tabContainer.addEventListener('click', handleClick);
